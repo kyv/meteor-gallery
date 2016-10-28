@@ -1,0 +1,22 @@
+<template name="tags">
+{{#if metadata.tags}}
+ <ul class="tagList list-inline">
+
+     <label>{{i18n 'tags'}}:</label>{{tags}}
+
+ </ul>
+{{/if}}
+</template>
+
+<template name="tagCloud">
+
+<div>
+ <ul id="tagCloudTags" class="row">
+    {{#each tags}}
+
+        <li><a href="{{tag}}">{{tag}}</a></li>
+
+    {{/each}}
+ </ul>
+</div>
+</template>

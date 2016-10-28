@@ -1,0 +1,32 @@
+<template name="imageEdit">
+      <div class="col-md-12 image edit">
+        {{#with image}}
+        <div class="editWrapper center-block">
+            <div class="displayImage col-md-4 col-md-offset-2">
+                <a href="/gallery/{{this._id}}"><img src="{{this.url store='images'}}" class="img-responsive img-rounded" /></a>
+            </div>
+            <div class="editForm col-md-4">
+                <form class="main">
+
+                    <label class="control-label" for="title">Title</label>
+                    {{#if title }}
+                        <input name="title" class="form-control" type="text" value="{{metadata.title}}" placeholder="{{title}}" autofocus>
+                        {{else}}
+                        <input name="title" class="form-control" type="text" value="{{metadtata.title}}" placeholder="Add a Title" autofocus>
+                    {{/if}}
+                    <label class="control-label" for="title">Tags</label>
+                    <input name="tags" class="form-control" type="text" value="{{tagsString}}" data-role="tags"  placeholder="Tags" >
+                    <hr/>
+
+                    <input type="submit" value="Submit" class="btn btn-primary submit text-right">
+
+                    {{#FS.DeleteButton class="btn btn-danger remove" title="delete"}}
+                        Delete
+                    {{/FS.DeleteButton}}
+
+                </form>
+            </div>
+        </div>
+         {{/with}}
+      </div>
+</template>

@@ -1,0 +1,12 @@
+<template name="searchForm">
+      <form class="pull-left searchForm {{isNotActiveRoute 'gallery' 'hidden'}}" role="search">
+        <div class="form-group">
+          <div class="input-group">
+                <input type="text" class="form-control searchQuery" placeholder="{{i18n 'filter'}}" autofocus>
+                <a class="btn input-group-addon clearInput" data-toggle="tooltip" data-placement="bottom" title="{{i18n 'clear'}}"><span class="glyphicon glyphicon-refresh"></span></a>
+
+          </div>
+        </div>
+      </form>
+</template>
+

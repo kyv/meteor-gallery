@@ -1,0 +1,31 @@
+.notFound
+    position relative
+    width 50%
+    height auto
+    margin 20% auto
+    .glyphicon
+        //position relative
+        //bottom 0
+        //left 10%
+        color red
+    p
+        z-index 10
+        position absolute
+        top 0
+
+@media screen and (max-width: 360px)
+
+    .notFound
+        margin 40% auto
+        .glyphicon
+            font-size 400%
+        p
+            font-size 200%
+
+
+@media (min-width: 640px)
+
+    .notFound p
+        font-size 400%
+    .notFound .glyphicon
+        font-size 800%

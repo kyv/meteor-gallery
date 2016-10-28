@@ -1,0 +1,24 @@
+<template name="imageShow">
+      <div class="image view">
+          <img src="{{image.url store='images'}}" class="loading img-responsive fadeIn" />
+
+
+         {{#if image.title}}<span class="imageTitle"> <label>Title:</label>{{image.title}}</span>{{/if}}
+         <div class="socialWrapper">
+            {{> tags}}
+            {{> shareit image}}
+         </div>
+
+        <div class="imageNav">
+            {{#if ownImage }}{{#FS.DeleteButton class="btn btn-danger btn-xs remove" title="{{i18n 'delete'}}"}}<span class="glyphicon glyphicon-remove-circle"></span>{{/FS.DeleteButton}}
+            <a class="edit" title="{{i18n 'edit'}}" href="{{image._id}}/edit"><span class="glyphicon glyphicon-edit"></span></a>{{/if}}
+            {{#if prev }}
+            <a class="load-more prev" data-cancel-timout title="{{i18n previous}}" href="{{prev._id}}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+            {{/if}}
+            {{# if next}}
+            <a class="load-more next" data-cancel-timout title="{{i18n next}}" href="{{next._id}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            {{/if}}
+        </div>
+
+       </div>
+</template>

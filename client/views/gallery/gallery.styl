@@ -1,0 +1,24 @@
+.gallery
+    img
+        height 200px
+        animation fadein ease-in-out 1s
+        animation-fill-mode forwards
+    caption
+        font-size 80%
+        margin 1px
+
+.gallery-item
+    position relative
+    margin 10px 0
+    .btn
+        visibility hidden
+        position absolute
+        top 5px
+        right 20px
+        transition:all 300ms 100ms ease-in;
+    &:hover
+        .btn
+            visibility visible
+
+.load-more img
+    display none

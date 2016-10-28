@@ -1,0 +1,10 @@
+packages
+public
+.meteor
+*.lock
+bundle.tar.gz
+newApp
+bundle
+.bundle
+lib/config.js
+.demeteorized

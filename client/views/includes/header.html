@@ -1,0 +1,29 @@
+<template name="header">
+<div class="navigation row" role="navigation">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header sr-only">
+      <a class="navbar-brand" href="{{pathFor 'home'}}">{{i18n 'site.title'}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navigationRight pull-left" id="">
+      <ul class="nav navbar-nav list-inline">
+
+        <li class="{{isActiveRoute 'about'}}"><a data-cancel-timout data-toggle="tooltip" data-placement="bottom" title="{{i18n 'about.name'}}" href="{{pathFor 'about'}}"><span class="glyphicon glyphicon-qrcode"></span></a></li>
+
+        <li class="{{isActiveRoute 'gallery|imageShow|imageEdit'}}"><a data-cancel-timout data-toggle="tooltip" data-placement="bottom" title="{{i18n 'gallery'}}" href="{{pathFor 'gallery'}}"><span class="glyphicon glyphicon-th"></span></a></li>
+
+        <li class="{{isActiveRoute 'tags'}}"><a data-cancel-timout data-toggle="tooltip" data-placement="bottom" title="{{i18n 'tags'}}" href="{{pathFor 'tagsAll'}}"><span class="glyphicon glyphicon-tags"></span></a></li>
+
+        {{#if isPlaying}}
+        <li class="playerButton"><a data-cancel-timout data-toggle="tooltip" data-placement="bottom" title="{{i18n 'pause'}}" href="#"><span class="glyphicon glyphicon-pause"></span></a></li>
+        {{else}}
+        <li class="playerButton"><a data-toggle="tooltip" data-placement="bottom" title="{{i18n 'play'}}" href="#"><span class="glyphicon glyphicon-play"></span></a></li>
+        {{/if}}
+
+      </ul>
+       {{> searchForm}}
+    </div><!-- /.navigationRight -->
+</div>
+</template>

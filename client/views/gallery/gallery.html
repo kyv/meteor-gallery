@@ -1,0 +1,15 @@
+<template name="gallery">
+  <div class="gallery col-md-12">
+    {{#if currentUser}}
+        {{> dropZone }}
+    {{/if}}
+    {{#if images }}
+    {{#each images}}
+        {{> imageThumb }}
+    {{/each}}
+    {{/if}}
+  </div>
+</template>
+
+
+

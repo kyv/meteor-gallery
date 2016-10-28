@@ -1,0 +1,12 @@
+<template name="imageThumb">
+
+      <div  class="col-md-2 gallery-item ">
+        {{#unless this.isUploaded}}
+            {{> FS.UploadProgressBar }}
+
+        {{/unless}}
+         {{#if ownImage }}{{#FS.DeleteButton class="btn btn-danger btn-xs" title="delete"}}x{{/FS.DeleteButton}}{{/if}}
+         <a href="/gallery/{{this._id}}" data-tags="{{this.metadata.tags}}" title="{{this._id}}"><img src="{{this.url store='thumbs'}}" class="img-responsive img-rounded" /></a>
+      </div>
+
+</template>

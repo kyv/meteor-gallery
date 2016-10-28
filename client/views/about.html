@@ -1,0 +1,30 @@
+<template name = 'about'>
+<div class="pageWrapper col-md-offset-2 col-md-8">
+<div class="about col-md-5 fadeInTextShadow">
+
+{{#markdown}}
+
+{{i18n 'site.description'}}
+
+## {{i18n 'features'}}
+
+  * {{i18n 'singlePage'}}
+  * {{i18n 'routes'}} ( /, /gallery, /gallery/id )
+  * {{i18n 'dragNDrop'}}
+  * {{i18n 'tags'}}
+  * {{i18n 'userAccounts'}}
+  * {{i18n 'socialIntegration'}}
+  * {{i18n 'multilingual'}} (*{{langButton}}*)
+  * {{i18n 'mobileFriendly'}}
+
+## {{i18n 'credit'}}
+
+{{i18n 'atribution'}} *Kevin Brown*
+
+{{/markdown}}
+</div>
+<div class="col-md-offset-2 col-md-2" id="qrcode">{{> shareit}}</div>
+
+</div>
+
+</template>
